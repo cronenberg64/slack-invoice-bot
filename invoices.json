@@ -1,0 +1,42 @@
+[
+  {
+    "id": "INV-001",
+    "amount": 1500.00,
+    "dueDate": "2025-11-15",
+    "client": "Acme Corp",
+    "status": "overdue",
+    "assignedTo": "U12345678"
+  },
+  {
+    "id": "INV-002",
+    "amount": 2500.00,
+    "dueDate": "2025-11-20",
+    "client": "TechStart Inc",
+    "status": "overdue",
+    "assignedTo": "U87654321"
+  },
+  {
+    "id": "INV-003",
+    "amount": 3200.00,
+    "dueDate": "2025-12-01",
+    "client": "Global Solutions",
+    "status": "pending",
+    "assignedTo": "U11223344"
+  },
+  {
+    "id": "INV-004",
+    "amount": 1800.00,
+    "dueDate": "2025-12-10",
+    "client": "Innovation Labs",
+    "status": "pending",
+    "assignedTo": "U55667788"
+  },
+  {
+    "id": "INV-005",
+    "amount": 4500.00,
+    "dueDate": "2025-11-10",
+    "client": "Enterprise Co",
+    "status": "overdue",
+    "assignedTo": "U12345678"
+  }
+]
