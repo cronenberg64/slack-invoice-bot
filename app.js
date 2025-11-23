@@ -31,12 +31,7 @@ try {
 
 // Function to check if an invoice is overdue
 function isOverdue(invoice) {
-  if (invoice.status !== 'overdue') {
-    return false;
-  }
-  const dueDate = new Date(invoice.dueDate);
-  const today = new Date();
-  return dueDate < today;
+  return invoice.status === 'overdue';
 }
 
 // Function to send overdue invoice reminders
