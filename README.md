@@ -1,78 +1,32 @@
-# slack-invoice-bot
-A simple slack bot that automatically tracks invoices and sends direct reminders to team members when a payment is overdue
+# CollectionsBot MVP
 
-## Features
-- 📊 Automatically checks for overdue invoices every 60 seconds
-- 💬 Sends direct messages to assigned team members for overdue payments
-- ⚡ Slash command `/test-collections` to view invoice status report
-- 📝 JSON-based invoice storage for easy management
+A Slack bot that checks for overdue invoices and sends reminders to the assigned user.
 
 ## Setup
 
-### Prerequisites
-- Node.js 14.x or higher
-- A Slack workspace with admin access
-- Slack App with Bot Token and Signing Secret
+1.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-### Installation
+2.  **Configure environment:**
+    Copy `.env.example` to `.env` and fill in your Slack tokens.
+    ```bash
+    cp .env.example .env
+    ```
 
-1. Clone the repository:
-```bash
-git clone https://github.com/cronenberg64/slack-invoice-bot.git
-cd slack-invoice-bot
-```
+3.  **Start the bot:**
+    ```bash
+    npm start
+    ```
 
-2. Install dependencies:
-```bash
-npm install
-```
+4.  **Expose local server:**
+    ```bash
+    ngrok http 3000
+    ```
 
-3. Configure environment variables:
-   - Copy `.env` file and add your Slack credentials:
-     - `SLACK_BOT_TOKEN`: Your Slack Bot User OAuth Token (starts with `xoxb-`)
-     - `SLACK_SIGNING_SECRET`: Your Slack App's Signing Secret
+## Features
 
-4. Update `invoices.json` with your actual invoice data:
-   - `id`: Unique invoice identifier
-   - `amount`: Invoice amount in dollars
-   - `dueDate`: Due date in YYYY-MM-DD format
-   - `client`: Client name
-   - `status`: Invoice status (`overdue` or `pending`)
-   - `assignedTo`: Slack User ID of the assigned team member
-
-### Running the Bot
-
-Start the bot:
-```bash
-npm start
-```
-
-The bot will:
-- Load invoice data from `invoices.json`
-- Start checking for overdue invoices every 60 seconds
-- Send DM reminders to assigned users
-- Listen for the `/test-collections` slash command
-
-## Slack Command
-
-### `/test-collections`
-Displays a summary report of all invoices:
-- Total invoices count
-- Overdue invoices list
-- Pending invoices list
-
-## Invoice Data Structure
-
-```json
-{
-  "id": "INV-001",
-  "amount": 1500.00,
-  "dueDate": "2025-11-15",
-  "client": "Acme Corp",
-  "status": "overdue",
-  "assignedTo": "U12345678"
-}
-```
-
-## License
-MIT
+-   Checks for overdue invoices every minute.
+-   DMs the assigned user.
+-   `/test-collections` command to verify status.
