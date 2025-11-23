@@ -1,4 +1,4 @@
-# CollectionsBot MVP
+# CollectionsBot
 
 A Slack bot that checks for overdue invoices and sends reminders to the assigned user.
 
