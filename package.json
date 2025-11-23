@@ -1,0 +1,23 @@
+{
+  "name": "slack-invoice-bot",
+  "version": "1.0.0",
+  "description": "A simple slack bot that automatically tracks invoices and sends direct reminders to team members when a payment is overdue",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "keywords": [
+    "slack",
+    "bot",
+    "invoice",
+    "reminders"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^3.17.1",
+    "express": "^4.18.2"
+  }
+}
